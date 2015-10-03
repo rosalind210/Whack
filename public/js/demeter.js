@@ -25,6 +25,7 @@ function getHealthStatus(shower, hrsSleep, minsExercise) {
 		health = health + 1;	
 	}
 	return health;
+}
 
 function addImage(status){
 	var img = document.createElement('img');
