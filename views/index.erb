@@ -10,6 +10,12 @@
 
 <body>
   Today is <%= Time.now.strftime('%A') %>.
-
+  <form>
+    How many minutes did you exercise today?:<br>
+    <input type="text" name="exerciseMin">
+    <br>
+    How many hours did you sleep last night?:<br>
+    <input type="text" name="sleepHours">
+  </form>
   <script src="js/demeter.js"></script>
 </body>
