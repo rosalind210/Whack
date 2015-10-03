@@ -10,7 +10,7 @@
 
 <body>
   Today is <%= Time.now.strftime('%A') %>.
-  <form>
+  <form onSubmit="addImage(getHealthStatus(shower,sleepHours,exerciseMin))">
     How many minutes did you exercise today?:<br>
     <input type="text" name="exerciseMin">
     <br>
@@ -22,4 +22,5 @@
   </form>
   
   <script src="js/demeter.js"></script>
+
 </body>
