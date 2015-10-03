@@ -26,4 +26,10 @@ function getHealthStatus(shower, hrsSleep, minsExercise) {
 	}
 	return health;
 
+function addImage(status){
+	var img = document.createElement('img');
+	img.src = "../../flowerimg/stage"+status+".png";
+	document.body.appendChild(img);
+}
+
 </script>
