@@ -235,7 +235,7 @@ a.btn_red  {
      margin-bottom: 5px;
 }
  
-.user_register input[type="username"],  .user_register input[type="password"]  {
+.user_register input[type="username"], .user_register input[type="password"], .user_register input[type="birthday"]  {
     display:  block;
      width: 90%;
      padding:  10px;
