@@ -1,4 +1,4 @@
-<script>
+
 
 function getHealthStatus(shower, hrsSleep, minsExercise) {
 	// start at 0 points
@@ -64,4 +64,3 @@ $(function () {
  
 })
 
-</script>
