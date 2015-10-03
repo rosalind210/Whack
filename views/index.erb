@@ -8,6 +8,57 @@
   <link href='styles/demeter.css' rel='stylesheet' type='text/css'>
 </head>
 
+<div class = "header">
+  <a id="modal_trigger" href="#modal" class="btn">Login</a>
+  <div id="modal" class="popupContainer" style="display:none">
+    <header class="popupHeader">
+      <span class = "header_title">Login</span>
+      <span class = "modal_class"> <i class="fa fa-times"></i></span>
+    </header>
+    
+    <section class="popupBody">
+      <!-- email login (going to be default) -->
+      <div class = "user_login">
+        <form>
+          <label>Username</label>
+          <input type="username"/>
+          <br />
+          <label>Password</label>
+          <input type="password" />
+          
+          <br />
+          <div class="checkbox"> 
+          <input id="remember" type="checkbox" />
+          <label>Remember me on this computer</label>
+          </div>
+          <div class="action_btns">
+          <div class="one_half">
+            <a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a>
+          </div>
+        </form>
+      </div>
+      
+      <!-- Register -->
+      <div class = "user_register">
+        <form>
+          <label>Username</label>
+          <input type="username" />
+          <br />
+        
+          <label>Password</label>
+          <input type="password" />
+          <br />
+          
+          <div class="action_btns">
+            <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
+            <div class="one_half last"><a href="#" class="btn btn_red">Register</a></div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+</div>
+
 <body>
   Today is <%= Time.now.strftime('%A') %>.
   <form onSubmit="addImage(getHealthStatus(shower,sleepHours,exerciseMin))">
