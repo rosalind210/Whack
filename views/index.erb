@@ -9,7 +9,7 @@
 </head>
 
 <div class = "header">
-  
+  <div id = "imageSpace"></div>
   <a id="modal_trigger" href="#modal" class="btn">Login</a>
   <div id="modal" class="popupContainer" style="display: none">
     <header class="popupHeader">
@@ -66,7 +66,7 @@
   Today is <%= Time.now.strftime('%A') %>.
   <form id="healthStats">
     <input type="checkbox" name="shower">Have you showered in the last 24 hours?<br>
-    <div id = "imageSpace"></div>
+    
     How many minutes did you exercise today?
     <input type="text" name="exercise">
     <br>
