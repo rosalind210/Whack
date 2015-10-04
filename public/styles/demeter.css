@@ -2,6 +2,12 @@ body {
   font-family: 'Avenir Next';
 }
 
+img {
+  float: right;
+  height: 100;
+  weight: 100;
+}
+
 #lean_overlay {
     position: fixed;
     z-index:100;
