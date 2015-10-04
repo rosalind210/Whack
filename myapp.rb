@@ -2,7 +2,7 @@
 require 'sinatra'
 require 'json'
 #require 'sinatra/activerecord'
-require 'yaml'
+# require 'yaml'
 # require 'mysql'
 
 # ActiveRecord::Base.establish_connection(
@@ -20,20 +20,20 @@ require 'yaml'
 # end
 
 # class App < Sinatra::Application
-# end 
+# end
 
-DB_CONFIG = YAML::load(File.open('config/database.yml'))
+# DB_CONFIG = YAML::load(File.open('config/database.yml'))
 
-set :database, "mysql2://#{whack}:#{h4ck3rs}@#{whacktest.ced345elx9gg.us-west-2.rds.amazonaws.com}:#{3306}/#{whackplant}"
+# set :database, "mysql2://#{whack}:#{h4ck3rs}@#{whacktest.ced345elx9gg.us-west-2.rds.amazonaws.com}:#{3306}/#{whackplant}"
 
-#Model
-class User < ActiveRecord::Base
-end 
+# #Model
+# class User < ActiveRecord::Base
+# end
 
 get '/' do
- @items = User.all 
- puts @items
- #erb :index
+ # @items = User.all
+ # puts @items
+ erb :index
 end
 
 

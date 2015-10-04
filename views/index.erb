@@ -6,6 +6,9 @@
 
   <link rel="icon" type="image/png" href="images/favicon.png" />
   <link href='styles/demeter.css' rel='stylesheet' type='text/css'>
+
+  <script src='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.js'></script>
+  <link href='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.css' rel='stylesheet' />
 </head>
 
 <div class = "header">
@@ -65,14 +68,15 @@
   <div id="leftC">
     Today is <%= Time.now.strftime('%A') %>.<br><br>
     <form id="healthStats">
-      <input type="checkbox" name="shower">Have you showered in the last 24 hours?<br><br>
+      Have you showered in the last 24 hours? <input type="checkbox" name="shower"><br><br>
       How many minutes did you exercise today?
-      <input type="text" name="exercise" size="3">
+      <input type="text" name="exercise" size="2">
       <br><br>
       How many hours did you sleep last night?
-      <input type="text" name="sleep" size="3"><br><br>
+      <input type="text" name="sleep" size="2"><br><br>
       <input type="submit" value="Submit">
     </form>
+    <div id="map"></div>
   </div>
 
   <div id="rightC">

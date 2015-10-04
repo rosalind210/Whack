@@ -6,6 +6,43 @@ window.onload = function() {
   document.getElementById('imageSpace').appendChild(img);
 
   setTimeout(function(){$('#flower').fadeTo(2000, 1.0)}, 500);
+
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+
+    L.mapbox.accessToken = 'pk.eyJ1IjoiYW5nZWxoYWNrc3F1YWQiLCJhIjoiZDAwYmMwMTcwMzQ0NTdiMmUzMGJmNWZjNmFmOTI2OGYifQ.ifIhIKtHhbExiHiCXqFoIw';
+    // var geolocate = document.getElementById('geolocate');
+    var map = L.mapbox.map('map', 'mapbox.streets');
+
+    var myLayer = L.mapbox.featureLayer().addTo(map);
+
+    map.locate();
+
+    // Once we've got a position, zoom and center the map
+    // on it, and add a single marker.
+    map.on('locationfound', function(e) {
+        map.fitBounds(e.bounds);
+
+        myLayer.setGeoJSON({
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [e.latlng.lng, e.latlng.lat]
+            },
+            properties: {
+                'title': 'Here I am!',
+                'marker-color': '#ff8888',
+                'marker-symbol': 'star'
+            }
+        });
+
+    });
+  }
+
+  function showPosition(position) {
+    pos = "Latitude: " + position.coords.latitude +
+    "<br>Longitude: " + position.coords.longitude;
+  }
 }
 
 function getHealthStatus(shower, hrsSleep, minsExercise) {
@@ -156,3 +193,6 @@ $(".back_btn").click(function () {
   $(".header_title").text('Login');
   return false;
 });
+
+
+

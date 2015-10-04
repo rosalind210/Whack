@@ -1,5 +1,6 @@
 body {
   font-family: 'Avenir Next';
+  background-color: #D6F5FF;
 }
 
 img {
@@ -276,12 +277,12 @@ a.btn_red  {
     background-color: #f1f1f1;
     padding: 15px;
     padding-bottom: 5px;
+    width: 40%;
+    height: 65%;
 }
 
 #rightC {
     float: left;
 }
 
-#imageSpace {
-    align: center;
-}
+#map { position:absolute; top:300; bottom:0; width:39%; height: 30%;}
