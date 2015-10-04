@@ -25,16 +25,26 @@ function getHealthStatus(shower, hrsSleep, minsExercise) {
   return health;
 }
 
-$("#healthStats").submit(function(event){
+$('#healthStats').submit(function(event){
   event.preventDefault();
 
-  // get stuff from db
+  var healthData = {
+    'username': 'april',
+    'shower': this.shower.checked,
+    'exercise': this.exercise.value,
+    'sleep': this.sleep.value
+  };
+  console.log(healthData);
+
+  $.post( '/update', JSON.stringify(healthData), function( data ) {
+    console.log(data);
+  }, JSON);
 
   var img = document.createElement('img');
-  img.src = "images/stage5.png";
-  //document.getElementById("healthStats").appendChild(img);
+  img.src = 'images/stage5.png';
+  //document.getElementById('healthStats').appendChild(img);
   //document.body.appendChild(img);
-  document.getElementById("imageSpace").appendChild(img);
+  document.getElementById('imageSpace').appendChild(img);
   console.log('I work');
 });
 
@@ -44,10 +54,10 @@ $.fn.extend({
       top: 100,
       overlay: 0.5,
       closeButton: null
-    }
+    };
 
-    var overlay = $("<div id='lean_overlay'></div>");
-    $("body").append(overlay);
+    var overlay = $('<div id="lean_overlay"></div>');
+    $('body').append(overlay);
 
     options = $.extend(defaults, options);
 
@@ -55,9 +65,9 @@ $.fn.extend({
       var o = options;
 
       $(this).click(function(e) {
-        var modal_id = $(this).attr("href");
+        var modal_id = $(this).attr('href');
 
-        $("#lean_overlay").click(function() {
+        $('#lean_overlay').click(function() {
           close_modal(modal_id);
         });
 
@@ -81,8 +91,8 @@ $.fn.extend({
           'opacity': 0,
           'z-index': 11000,
           'left': 50 + '%',
-          'margin-left': -(modal_width / 2) + "px",
-          'top': o.top + "px"
+          'margin-left': -(modal_width / 2) + 'px',
+          'top': o.top + 'px'
         });
 
         $(modal_id).fadeTo(200, 1);
@@ -92,7 +102,7 @@ $.fn.extend({
     });
 
     function close_modal(modal_id) {
-      $("#lean_overlay").fadeOut(200);
+      $('#lean_overlay').fadeOut(200);
 
       $(modal_id).css({
               'display': 'none'

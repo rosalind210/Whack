@@ -66,14 +66,12 @@
 <body>
   Today is <%= Time.now.strftime('%A') %>.
   <form id="healthStats">
-    How many minutes did you exercise today?:<br>
-    <input type="text" name="exerciseMin">
+    <input type="checkbox" name="shower">Have you showered in the last 24 hours?<br>
+    How many minutes did you exercise today?
+    <input type="text" name="exercise">
     <br>
-    How many hours did you sleep last night?:<br>
-    <input type="text" name="sleepHours"><br>
-    Have you showered in the last 24 hours? <br>
-    <input type="radio" name="shower" value=true>Yes<br>
-    <input type="radio" name="shower" value=false>No<br>
+    How many hours did you sleep last night?
+    <input type="text" name="sleep"><br>
     <input type="submit" value="Submit">
   </form>
 
