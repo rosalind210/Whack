@@ -113,7 +113,7 @@ $.fn.extend({
 
 // Plugin options and our code
 $("#modal_trigger").leanModal({
-  margin-top: 0 auto;
+  margin: 100;
   overlay: 0.6;
   closeButton: ".modal_close"
 });
