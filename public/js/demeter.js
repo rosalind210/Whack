@@ -31,7 +31,7 @@ $("#healthStats").submit(function(event){
   // get stuff from db
 
   var img = document.createElement('img');
-  img.src = "images/stage1.png";
+  img.src = "images/stage5.png";
   //document.getElementById("healthStats").appendChild(img);
   //document.body.appendChild(img);
   document.getElementById("imageSpace").appendChild(img);
