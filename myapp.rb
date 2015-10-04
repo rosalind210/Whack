@@ -1,8 +1,9 @@
 # myapp.rb
 require 'sinatra'
 require 'json'
-#require 'sinatra/activerecord'
+require 'sinatra/activerecord'
 require 'yaml'
+requie '/models/models.rb'
 # require 'mysql'
 
 # ActiveRecord::Base.establish_connection(
