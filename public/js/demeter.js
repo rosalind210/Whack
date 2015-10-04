@@ -32,7 +32,7 @@ $("#healthStats").submit(function(event){
 
   var img = document.createElement('img');
   img.src = "images/stage1.png";
-  document.body.appendChild(img);
+  document.getElementById("healthStats").appendChild(img);
   console.log('I work');
 });
 
