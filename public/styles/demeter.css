@@ -17,8 +17,7 @@ img {
 }
 
 #modal_trigger {
-	margin-top: 0;
-	!important;
+	margin-top: 0 !important;
 }
 
 #lean_overlay {
