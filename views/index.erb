@@ -13,9 +13,9 @@
   <div id="modal" class="popupContainer" style="display:none">
     <header class="popupHeader">
       <span class = "header_title">Login</span>
-      <span class = "modal_class"> <i class="fa fa-times"></i></span>
+      <span class = "modal_close"> <i class="fa fa-times"></i></span>
     </header>
-    
+
     <section class="popupBody">
       <!-- email login (going to be default) -->
       <div class = "user_login">
@@ -25,30 +25,30 @@
           <br />
           <label>Password</label>
           <input type="password" />
-          
+
           <br />
-          <div class="checkbox"> 
+          <div class="checkbox">
           <input id="remember" type="checkbox" />
           <label>Remember me on this computer</label>
           </div>
           <div class="action_btns">
           <div class="one_half">
-            <a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a>
+            <a href="#" id="register_form" class="btn">Sign up</a>
           </div>
         </form>
       </div>
-      
+
       <!-- Register -->
       <div class = "user_register">
         <form>
           <label>Username</label>
           <input type="username" />
           <br />
-        
+
           <label>Password</label>
           <input type="password" />
           <br />
-          
+
           <label>Birthday</label>
           <input type ="birthday" />
           <br />
@@ -64,7 +64,7 @@
 
 <body>
   Today is <%= Time.now.strftime('%A') %>.
-  <form onSubmit="addImage(getHealthStatus(shower,sleepHours,exerciseMin))">
+  <form id="healthStats">
     How many minutes did you exercise today?:<br>
     <input type="text" name="exerciseMin">
     <br>
@@ -75,151 +75,7 @@
     <input type="radio" name="shower" value=false>No<br>
     <input type="submit" value="Submit">
   </form>
-  
+
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-  
-  <script>
-  function getHealthStatus(shower, hrsSleep, minsExercise) {
-	// start at 0 points
-	var health = 0;
-
-	// you get two points for showering
-	// shower should be boolean value
-	if (shower) {
-		health = health + 2;
-	}
-
-	// one point for exercising more than 30 min
-	if (minsExercise > 30) {
-		health = health + 1;
-	}
-
-	// one point for sleeping more than 6 hours
-	if (hrsSleep > 6) {
-		health = health + 1;
-	}
-	
-	// last point for doing all three
-	if ((shower) && (minsExercise>30) && (hrsSleep>6)){
-		health = health + 1;	
-	}
-	return health;
-}
-
-function addImage(status){
-	var img = document.createElement('img');
-	img.src = "../../flowerimg/stage"+status+".png";
-	document.body.appendChild(img);
-}
-
-(function($) {
-        $.fn.extend({
-                leanModal: function(options) {
-
-                        var defaults = {
-                                top: 100,
-                                overlay: 0.5,
-                                closeButton: null
-                        }
-
-                        var overlay = $("<div id='lean_overlay'></div>");
-
-                        $("body").append(overlay);
-
-                        options = $.extend(defaults, options);
-
-                        return this.each(function() {
-
-                                var o = options;
-
-                                $(this).click(function(e) {
-
-                                        var modal_id = $(this).attr("href");
-
-                                        $("#lean_overlay").click(function() {
-                                                close_modal(modal_id);
-                                        });
-
-                                        $(o.closeButton).click(function() {
-                                                close_modal(modal_id);
-                                        });
-
-                                        var modal_height = $(modal_id).outerHeight();
-                                        var modal_width = $(modal_id).outerWidth();
-
-                                        $('#lean_overlay').css({
-                                                'display': 'block',
-                                                opacity: 0
-                                        });
-
-                                        $('#lean_overlay').fadeTo(200, o.overlay);
-
-                                        $(modal_id).css({
-
-                                                'display': 'block',
-                                                'position': 'fixed',
-                                                'opacity': 0,
-                                                'z-index': 11000,
-                                                'left': 50 + '%',
-                                                'margin-left': -(modal_width / 2) + "px",
-                                                'top': o.top + "px"
-
-                                        });
-
-                                        $(modal_id).fadeTo(200, 1);
-
-                                        e.preventDefault();
-
-                                });
-
-                        });
-
-                        function close_modal(modal_id) {
-
-                                $("#lean_overlay").fadeOut(200);
-
-                                $(modal_id).css({
-                                        'display': 'none'
-                                });
-
-                        }
-
-                }
-        });
-
-})(jQuery);
-
-// Plugin options and our code
-$("#modal_trigger").leanModal({
-        top: 100,
-        overlay: 0.6,
-        closeButton: ".modal_close"
-});
-
-$(function () {
-    // Calling Login Form
-    $("#login_form").click(function () {
-        $(".user_login").show();
-        return false;
-    });
- 
-    // Calling Register Form
-    $("#register_form").click(function () {
-    	$(".user_login").hide();
-        $(".user_register").show();
-        $(".header_title").text('Register');
-        return false;
-    });
- 
-    // Going back to Social Forms
-    $(".back_btn").click(function () {
-        $(".user_login").show();
-        $(".user_register").hide();
-        $(".header_title").text('Login');
-        return false;
-    });
- 
-});
-
-</script>
+  <script type="text/javascript" src="js/demeter.js"></script>
 </body>
