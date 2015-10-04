@@ -115,7 +115,9 @@ $("#login_form").click(function () {
 // Calling Register Form
 $("#register_form").click(function () {
   $(".user_login").hide();
+  console.log('hide');
   $(".user_register").show();
+  console.log('show');
   $(".header_title").text('Register');
   return false;
 });
