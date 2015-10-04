@@ -16,6 +16,10 @@ img {
 	height = 50px;
 }
 
+#modal_trigger {
+	margin-top: 0;
+}
+
 #lean_overlay {
     position: fixed;
     z-index:100;
