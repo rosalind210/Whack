@@ -26,7 +26,7 @@ img {
     background: #000;
     display: none;
 }
- 
+
 /* Modal box or Popup box */
 .popupContainer{
 	position:absolute;
@@ -88,31 +88,31 @@ a.btn_red  {
      width: 100px;
      display: block;
 }
- 
+
 .btn  {
     padding: 10px 20px;
      background:  #F4F4F2;
 }
- 
+
 .btn_red  {
     background:  #ED6347;
      color:  #FFF;
 }
- 
+
 .btn:hover  {
     background:  #E4E4E2;
 }
- 
+
 .btn_red:hover  {
     background:  #C12B05;
 }
- 
+
 a.btn  {
     color: #666;
      text-align:  center;
      text-decoration:  none;
 }
- 
+
 a.btn_red  {
     color:  #FFF;
 }
@@ -122,7 +122,7 @@ a.btn_red  {
     font-size: 16px;
      text-transform:  uppercase;
 }
- 
+
 .popupHeader  {
     background: #F4F4F2;
      position: relative;
@@ -130,7 +130,7 @@ a.btn_red  {
      border-bottom: 1px solid #DDD;
      font-weight: bold;
 }
- 
+
 .popupHeader .modal_close  {
     position:  absolute;
      right:  0;
@@ -141,7 +141,7 @@ a.btn_red  {
      color: #aaa;
      font-size: 16px;
 }
- 
+
 .popupBody  {
     padding: 20px;
 }
@@ -200,12 +200,12 @@ a.btn_red  {
      background:  #F4F4F2;
      overflow:  hidden;
 }
- 
+
 .user_login label  {
     display:  block;
      margin-bottom: 5px;
 }
- 
+
 .user_login input[type="username"],  .user_login input[type="password"]  {
     display:  block;
      width: 90%;
@@ -213,17 +213,17 @@ a.btn_red  {
      border: 1px solid #DDD;
      color: #666;
 }
- 
+
 .user_login input[type="checkbox"]  {
     float: left;
      margin-right: 5px;
 }
- 
+
 .user_login input[type="checkbox"]+label  {
     float: left;
 }
- 
- 
+
+
 .user_login .checkbox  {
     margin-bottom:  10px;
      clear:  both;
@@ -234,12 +234,12 @@ a.btn_red  {
 .user_register  {
     display:  none;
 }
- 
+
 .user_register label  {
     display:  block;
      margin-bottom: 5px;
 }
- 
+
 .user_register input[type="username"], .user_register input[type="password"], .user_register input[type="birthday"]  {
     display:  block;
      width: 90%;
@@ -247,19 +247,41 @@ a.btn_red  {
      border: 1px solid #DDD;
      color: #666;
 }
- 
+
 .user_register input[type="checkbox"]  {
     float: left;
      margin-right: 5px;
 }
- 
+
 .user_register input[type="checkbox"]+label  {
     float: left;
 }
- 
- 
+
+
 .user_register .checkbox  {
     margin-bottom:  10px;
      clear:  both;
      overflow:  hidden;
+}
+
+/* Divs */
+#healthStats {
+
+}
+
+#leftC {
+    float: left;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    padding: 15px;
+    padding-bottom: 5px;
+}
+
+#rightC {
+    float: left;
+}
+
+#imageSpace {
+    align: center;
 }

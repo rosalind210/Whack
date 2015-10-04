@@ -1,3 +1,11 @@
+window.onload = function() {
+  var img = document.createElement('img');
+  img.src = 'images/stage5.png';
+  document.getElementById('imageSpace').appendChild(img);
+
+    img.style.opacity = 0.5;
+}
+
 function getHealthStatus(shower, hrsSleep, minsExercise) {
   // start at 0 points
   var health = 0;
