@@ -5,7 +5,9 @@ body {
 img {
   float: right;
   height: 500;
-  weight: 500;
+  width: 500;
+  position: relative
+  top: -2px;
 }
 
 #lean_overlay {
