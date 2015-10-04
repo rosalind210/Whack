@@ -2,6 +2,14 @@ body {
   font-family: 'Avenir Next';
 }
 
+img {
+  float: right;
+  height: 500;
+  width: 350;
+  position: relative
+  top: -200;
+}
+
 #lean_overlay {
     position: fixed;
     z-index:100;
@@ -214,15 +222,6 @@ a.btn_red  {
     margin-bottom:  10px;
      clear:  both;
      overflow:  hidden;
-}
- 
-.forgot_password  {
-    display: block;
-     margin:  20px 0 10px;
-     clear:  both;
-     overflow:  hidden;
-     text-decoration:  none;
-     color: #ED6347;
 }
 
 /* User Register Form */
