@@ -1,9 +1,11 @@
 window.onload = function() {
   var img = document.createElement('img');
+  img.setAttribute('id', 'flower');
+  img.style.opacity = 0;
   img.src = 'images/stage5.png';
   document.getElementById('imageSpace').appendChild(img);
 
-    img.style.opacity = 0.5;
+  setTimeout(function(){$('#flower').fadeTo(2000, 1.0)}, 500);
 }
 
 function getHealthStatus(shower, hrsSleep, minsExercise) {
