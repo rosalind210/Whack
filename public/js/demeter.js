@@ -9,8 +9,8 @@ window.onload = function() {
 }
 
 function getHealthStatus(shower, hrsSleep, minsExercise) {
-  // start at 0 points
-  var health = 0;
+  // start at 1 point
+  var health = 1;
 
   // you get two points for showering
   // shower should be boolean value
@@ -28,10 +28,6 @@ function getHealthStatus(shower, hrsSleep, minsExercise) {
     health = health + 1;
   }
 
-  // last point for doing all three
-  if ((shower) && (minsExercise>30) && (hrsSleep>6)){
-    health = health + 1;
-  }
   return health;
 }
 
