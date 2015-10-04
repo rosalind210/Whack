@@ -41,7 +41,7 @@ $("#healthStats").submit(function(event){
 $.fn.extend({
   leanModal: function(options) {
     var defaults = {
-      top: 100,
+      top: 50,
       overlay: 0.5,
       closeButton: null
     }
