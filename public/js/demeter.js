@@ -34,7 +34,7 @@ $("#healthStats").submit(function(event){
   img.src = "images/stage1.png";
   //document.getElementById("healthStats").appendChild(img);
   //document.body.appendChild(img);
-  document.header.appendChild(img);
+  document.getElementById("header").appendChild(img);
   console.log('I work');
 });
 
