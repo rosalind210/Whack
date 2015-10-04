@@ -108,6 +108,7 @@ $("#modal_trigger").leanModal({
 
 // Calling Login Form
 $("#login_form").click(function () {
+  $(".user_register").hide();
   $(".user_login").show();
   return false;
 });
