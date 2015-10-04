@@ -49,7 +49,8 @@ $('#healthStats').submit(function(event){
   }, JSON);
 
   var img = document.createElement('img');
-  img.src = 'images/stage5.png';
+  //img.src = 'images/stage5.png';
+  img.src = 'images/stage'+getHealthStatus(healthData.shower,healthData.sleep,healthData.exercise)+'.png';
   //document.getElementById('healthStats').appendChild(img);
   //document.body.appendChild(img);
   document.getElementById('imageSpace').appendChild(img);

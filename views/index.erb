@@ -19,12 +19,12 @@
     <section class="popupBody">
       <!-- username login (going to be default) -->
       <div class="user_login">
-        <form>
+        <form id="login">
           <label>Username</label>
-          <input type="username"/>
+          <input type="username" name = "username"/>
           <br />
           <label>Password</label>
-          <input type="password" />
+          <input type="password" name = "password" />
 
           <br />
           <div class="checkbox">
@@ -39,17 +39,17 @@
 
       <!-- Register -->
       <div class="user_register" style="display:none">
-        <form>
+        <form id = "register">
           <label>Username</label>
-          <input type="username" />
+          <input type="username"  name = "username"/>
           <br />
 
           <label>Password</label>
-          <input type="password" />
+          <input type="password"  name = "password"/>
           <br />
 
-          <label>Birthday</label>
-          <input type ="birthday" />
+          <label>Birthday (mm/dd/yyyy)</label>
+          <input type ="birthday" name = "birthday"/>
           <br />
           <div class="action_btns">
             <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
